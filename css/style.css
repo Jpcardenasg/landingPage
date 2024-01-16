@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.tds-icon {
+    color: #171a20;
+    inline-size: calc(24px*5);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
