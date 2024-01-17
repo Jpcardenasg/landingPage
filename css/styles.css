@@ -10,13 +10,16 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
+    margin: 0;
 }
 
 nav {
+    position: fixed;
+    top: 20px;
     width: 100%;
-    height: 10vh;
+    z-index: 1000;
 }
 
 .tds-icon {
@@ -26,8 +29,10 @@ nav {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
+    max-width: 1200px;
     height: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,21 +80,17 @@ nav {
 
 section {
     width: 100%;
-    height: 90vh;
 }
 
 section .content {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .content .main-content {
     color: #171a20;
-    min-width: 600px;
-    width: 100px;
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -111,7 +112,7 @@ section .content {
     display: flex;
     margin: 20px 10px;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     min-height: 7vh;
 }
 
@@ -120,7 +121,7 @@ section .content {
 }
 
 .order button {
-    min-width: 50%;
+    min-width: 40%;
     margin-left: 10px;
     border: none;
     outline: none;
@@ -139,40 +140,26 @@ section .content {
 }
 
 .content .image img {
-    max-width: 450px;
     width: 100%;
-    margin-right: 100px;
+    height: 100%;
     filter: drop-shadow(-10px -10px 200px #171a20);
-    border-radius: 10px;
 }
 
 @media (max-width: 800px) {
-    .content {
-        display: flex;
-        width: 100%;
-        flex-direction: column-reverse;
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .main-content {
-        margin: 0 10px;
-    }
-}
-
-@media (min-width: 884px) {
-    .content .image img {
-        min-width: 500px;
+    .container .links {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 440px) {
 
-    .links {
-        display: none;
-    }
-
     .content .image img {
-        width: 400px;
-        margin-right: -50vw;
+        width: 100%;
     }
 }
-
