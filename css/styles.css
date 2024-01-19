@@ -16,7 +16,8 @@ body {
 
 nav {
     width: 100%;
-    height: 10vh;
+    top: 20px;
+    position: fixed;
     z-index: 1000;
 }
 
@@ -24,7 +25,7 @@ nav {
     width: 100%;
     max-width: 1200px;
     height: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,15 +58,27 @@ nav {
 .links.active {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    padding: 20px 30px;
-    height: 100%;
+    align-items: center;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #c4c4c4;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, rgba(246, 245, 245, 0.9), rgba(99, 94, 92, 0.9));
     z-index: 100;
+}
+
+.links.active .exit-menu {
+    border: none;
+    color: #171a20;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 24px;
 }
 
 .container .links a {
@@ -96,6 +109,7 @@ section .content {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    padding: 10px;
 }
 
 .main-content h1 {
@@ -114,7 +128,7 @@ section .content {
 
 .main-content .order {
     display: flex;
-    margin: 20px 10px;
+    margin-top: 20px;
     width: 100%;
     justify-content: space-between;
     min-height: 7vh;
@@ -126,14 +140,12 @@ section .content {
 
 .order button {
     min-width: 40%;
-    margin-left: 10px;
     border: none;
     outline: none;
     border-radius: 10px;
     background: linear-gradient(to bottom right, #171a20 40%, #635e5c);
     color: white;
     font-weight: 700;
-    padding: 0 2px;
     font-size: clamp(0.6rem, 1rem 5vw, 3rem);
     transition: 0.1s linear;
 }
