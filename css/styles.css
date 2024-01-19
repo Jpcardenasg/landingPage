@@ -11,11 +11,14 @@
 body {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 nav {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    margin: 0 auto;
     top: 20px;
     position: fixed;
     z-index: 1000;
@@ -174,6 +177,10 @@ section .content {
 
     .links {
         display: flex;
+    }
+
+    .links .exit-menu {
+        display: none;
     }
 
     .container .links a {
