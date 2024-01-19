@@ -52,12 +52,17 @@ nav {
 .links.active {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    padding: 8px;
+    top: 124%;
+    left: 0;
+    background-color: #c4c4c4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container .links a {
     color: #171a20;
     text-decoration: none;
-    filter: drop-shadow(2px 2px 2px #d3d3d3);
 }
 
 .container .search i{
@@ -149,7 +154,6 @@ section .content {
 
     .links {
         display: flex;
-        justify-content: space-around;
     }
 
     .container .links a {
@@ -158,8 +162,6 @@ section .content {
         cursor: pointer;
         position: relative;
         margin: 0 20px;
-        filter: drop-shadow(2px 2px 2px #d3d3d3);
-        display: contents;
     }
 
     .container .search i{
